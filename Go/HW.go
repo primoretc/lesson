@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 // comment
@@ -10,7 +11,5 @@ func main() {
 	fmt.Println("Введите имя  ")
 	fmt.Scanln(&nm)
 	fmt.Println("HW " + nm)
-	fmt.Println("11111")
+	fmt.Println(os.Getgid())
 }
-
-// заработал git в VS Code
