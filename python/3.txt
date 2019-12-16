@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-rrrrr
-=======
 TEST
->>>>>>> 0c797dad389845edbcca0ae18bab883a1912ecf9
+=======
+2qwer
+>>>>>>> be26bc18ce732743a5b3ee4b4ddbe38c12a59d72
