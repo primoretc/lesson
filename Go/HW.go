@@ -2,6 +2,8 @@ package main
 import ("fmt")
 // comment
   func main()  {
-    mn:="Nik"
-    fmt.Println("HW " + mn)
+    var nm string
+    fmt.Println("Введите имя  ")
+    fmt.Scanln(&nm)
+    fmt.Println("HW " + nm)
   }
