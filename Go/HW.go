@@ -1,7 +1,7 @@
-package base
+package main
 import ("fmt")
 // comment
   func main()  {
     mn:="Nik"
-    fmt.Prinln("HW" + mn)
+    fmt.Println("HW " + mn)
   }
