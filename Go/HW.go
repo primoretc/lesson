@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"os"
 )
 
@@ -12,4 +13,5 @@ func main() {
 	fmt.Scanln(&nm)
 	fmt.Println("HW " + nm)
 	fmt.Println(os.Getgid())
+	fmt.Println(math.Sqrt(625))
 }
