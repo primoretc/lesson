@@ -7,3 +7,4 @@ import ("fmt")
     fmt.Scanln(&nm)
     fmt.Println("HW " + nm)
   }
+ // заработал git в VS Code 
