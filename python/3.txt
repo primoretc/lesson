@@ -1,4 +1,0 @@
-TEST
-=======
-2qwer
->>>>>>> be26bc18ce732743a5b3ee4b4ddbe38c12a59d72
