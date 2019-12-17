@@ -1,6 +1,12 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
+
+type vehicle interface {
+	move()
+}
 
 func main() {
 	fmt.Println("Hello Go")

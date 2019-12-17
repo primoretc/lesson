@@ -1,4 +1,5 @@
-# Голосовой ассистент КЕША 1.0 BETA
+# -*- encoding: utf-8 -*-
+# Голосовой ассистент КЕША
 import os
 import time
 import speech_recognition as sr
