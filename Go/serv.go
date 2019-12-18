@@ -1,23 +1,29 @@
 package main
+
 import (
-    "fmt"
-    "net/http"
+	"fmt"      // пакет для форматированного ввода вывода
+	"log"      // пакет для логирования
+	"net/http" // пакет для поддержки HTTP протокола
+	"strings"  // пакет для работы с  UTF-8 строками
 )
+
+func HomeRouterHandler(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()       //анализ аргументов,
+	fmt.Println(r.Form) // ввод информации о форме на стороне сервера
+	fmt.Println("path", r.URL.Path)
+	fmt.Println("scheme", r.URL.Scheme)
+	fmt.Println(r.Form["url_long"])
+	for k, v := range r.Form {
+		fmt.Println("key:", k)
+		fmt.Println("val:", strings.Join(v, ""))
+	}
+	fmt.Fprintf(w, "<b>Hello Golang</b>") // отправляем данные на клиентскую сторону
+}
+
 func main() {
-    resp, err := http.Get("https://google.com") 
-    if err != nil { 
-        fmt.Println(err) 
-        return
-    } 
-    defer resp.Body.Close()
-    for true {
-             
-        bs := make([]byte, 1014)
-        n, err := resp.Body.Read(bs)
-        fmt.Println(string(bs[:n]))
-         
-        if n == 0 || err != nil{
-            break
-        }
-    }
+	http.HandleFunc("/", HomeRouterHandler)  // установим роутер
+	err := http.ListenAndServe(":9000", nil) // задаем слушать порт
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
